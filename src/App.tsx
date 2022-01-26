@@ -1,25 +1,25 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
+import Segment1 from "./components/Segment1";
+import Segment2 from "./components/Segment2";
+// import Segment3 from "./components/Segment3";
 
 class App extends React.Component {
+  constructor(props: any) {
+    super(props);
+    this.state = {
+      nama: "Nadine",
+      kelas: "XII MIPA 1",
+      pagi: "true",
+      counter: 1,
+    };
+  }
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.tsx</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div style={{ textAlign: "center" }}>
+        <Segment1 nama="Nadine" kelas="XII MIPA 1" pagi="true" />
+        <Segment2 counter={1} />
       </div>
     );
   }
