@@ -2,19 +2,23 @@ import React from "react";
 
 interface ISegment2 {
   counter: number;
-  handleClick: () => number;
 }
 
-class Segment2 extends React.Component<any, ISegment2> {
+class Segment2 extends React.Component<{}, ISegment2> {
+  state = {
+    counter: 0,
+  };
   handleClick = () => {
+    const { counter } = this.state;
     this.setState({
-      counter: this.props.counter + 1,
+      counter: counter + 1,
     });
   };
   render() {
+    const { counter } = this.state;
     return (
       <div>
-        <h2>Counter: {this.props.counter}</h2>
+        <h2>Counter: {counter}</h2>
         <button type="button" onClick={this.handleClick}>
           Click Here
         </button>

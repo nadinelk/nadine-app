@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 import Segment1 from "./components/Segment1";
 import Segment2 from "./components/Segment2";
-// import Segment3 from "./components/Segment3";
+import Segment3 from "./components/Segment3";
 
 class App extends React.Component {
   constructor(props: any) {
@@ -19,7 +19,8 @@ class App extends React.Component {
     return (
       <div style={{ textAlign: "center" }}>
         <Segment1 nama="Nadine" kelas="XII MIPA 1" pagi="true" />
-        <Segment2 counter={1} />
+        <Segment2 />
+        <Segment3 />
       </div>
     );
   }
