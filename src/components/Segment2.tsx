@@ -8,6 +8,7 @@ class Segment2 extends React.Component<{}, ISegment2> {
   state = {
     counter: 0,
   };
+
   handleClick = () => {
     const { counter } = this.state;
     this.setState({
